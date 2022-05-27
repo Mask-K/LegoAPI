@@ -9,10 +9,10 @@ namespace Lego.Models
         }
 
         public virtual DbSet<Users> Users { get; set; } = null!;
-        public virtual DbSet<UserBoughtLego> UBL { get; set; } = null!;
-        public virtual DbSet<Target> Target { get; set; } = null!;
-        public virtual DbSet<Collection> Collection { get; set; } = null!;
-        public virtual DbSet<Constructor> Constructor { get; set; } = null!;
+        public virtual DbSet<UserBoughtLego> UBLs { get; set; } = null!;
+        public virtual DbSet<Target> Targets { get; set; } = null!;
+        public virtual DbSet<Collection> Collections { get; set; } = null!;
+        public virtual DbSet<Constructor> Constructors { get; set; } = null!;
 
     }
 }
