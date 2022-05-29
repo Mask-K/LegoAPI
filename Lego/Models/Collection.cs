@@ -17,7 +17,5 @@ namespace Lego.Models
         public string Name { get; set; }
 
         public virtual ICollection<Constructor> Constructors { get; set; }
-
-
     }
 }

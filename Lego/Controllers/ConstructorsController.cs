@@ -119,5 +119,9 @@ namespace Lego.Controllers
         {
             return (_context.Constructors?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+
+
+
     }
 }

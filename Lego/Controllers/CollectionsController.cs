@@ -22,7 +22,7 @@ namespace Lego.Controllers
 
         // GET: api/Collections
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Collection>>> GetCollection()
+        public async Task<ActionResult<IEnumerable<Collection>>> GetCollections()
         {
           if (_context.Collections == null)
           {
@@ -40,7 +40,6 @@ namespace Lego.Controllers
               return NotFound();
           }
             var collection = await _context.Collections.FindAsync(id);
-            var constructor = await _context.Constructors.FindAsync(id);
 
             if (collection == null)
             {
@@ -88,7 +87,7 @@ namespace Lego.Controllers
         {
           if (_context.Collections == null)
           {
-              return Problem("Entity set 'LegoAPIContext.Collection'  is null.");
+              return Problem("Entity set 'LegoAPIContext.Collections'  is null.");
           }
             _context.Collections.Add(collection);
             await _context.SaveChangesAsync();
